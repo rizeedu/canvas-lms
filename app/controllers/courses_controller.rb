@@ -2258,7 +2258,7 @@ class CoursesController < ApplicationController
         # clear notices that would have been displayed as a result of processing
         # an enrollment invitation, since we're giving an error
         flash[:notice] = nil
-        render_unauthorized_action
+        redirect_to root_path
       end
     end
   end
